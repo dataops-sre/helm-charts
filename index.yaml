@@ -1,14 +1,32 @@
 apiVersion: v1
 entries:
-  helm-chart-test:
+  airflow:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-10-19T21:20:47.365708105+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 54509edf749ff7712b159d1c2237c9b5003b08824d641d0fbe2d0781678504c4
-    name: helm-chart-test
+    created: "2020-10-19T23:19:16.555155032+02:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      tags:
+      - database
+      version: 7.1.0
+    description: Airflow Helm chart for Kubernetes
+    digest: 73c529c51429d7822a511a0138dda2387a0857b69debeee115e7ecf5a1fe8970
+    name: airflow
     type: application
     urls:
-    - https://mrmuggymuggy.github.io/helm-charts/helm-chart-test-0.1.0.tgz
+    - https://mrmuggymuggy.github.io/helm-charts/airflow-0.1.0.tgz
     version: 0.1.0
-generated: "2020-10-19T21:20:47.365149781+02:00"
+  nginx:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-10-19T23:19:16.555578571+02:00"
+    description: Nginx chart for Kubernetes
+    digest: bea7adba32c42bc31f346fcfd4c50e6089c243633f9636b3e6bcba34b4b02f6e
+    name: nginx
+    type: application
+    urls:
+    - https://mrmuggymuggy.github.io/helm-charts/nginx-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-10-19T23:19:16.551284582+02:00"

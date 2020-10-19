@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "airflow.fullname" . }}-pvc
+  labels:
+    {{- include "airflow.labels" . | nindent 4 }}
+  annotations:
+     helm.sh/resource-policy: keep
+spec:
+  accessModes:
+  - {{ .Values.logsPersistence.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.logsPersistence.size }}
