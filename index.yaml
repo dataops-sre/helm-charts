@@ -3,7 +3,7 @@ entries:
   airflow:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-10-19T23:19:16.555155032+02:00"
+    created: "2020-10-20T16:36:26.393389471+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -12,7 +12,7 @@ entries:
       - database
       version: 7.1.0
     description: Airflow Helm chart for Kubernetes
-    digest: 73c529c51429d7822a511a0138dda2387a0857b69debeee115e7ecf5a1fe8970
+    digest: 483be36dff79be94e56fdf53811eafc4b4955d92de39b2023bbf4a063cebdd31
     name: airflow
     type: application
     urls:
@@ -21,12 +21,12 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-10-19T23:19:16.555578571+02:00"
+    created: "2020-10-20T16:36:26.393866687+02:00"
     description: Nginx chart for Kubernetes
-    digest: bea7adba32c42bc31f346fcfd4c50e6089c243633f9636b3e6bcba34b4b02f6e
+    digest: 422d10be7096f755bf2ae6298a33e5e504b31d5d72320a241b484e1330ea8c8f
     name: nginx
     type: application
     urls:
     - https://mrmuggymuggy.github.io/helm-charts/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2020-10-19T23:19:16.551284582+02:00"
+generated: "2020-10-20T16:36:26.391105606+02:00"

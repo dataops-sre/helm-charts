@@ -59,6 +59,10 @@ spec:
             periodSeconds: 60
             successThreshold: 1
             timeoutSeconds: 1
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "mkdir -p /usr/local/airflow/dags"]
           {{- with .Values.airflow.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
