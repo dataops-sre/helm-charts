@@ -1,7 +1,7 @@
 # Helm-charts
 Mrmuggymuggy's public helm charts repository
 
-#TL;TR
+## TL;TR
 To install charts in this repository with command line:
 
 ```bash
