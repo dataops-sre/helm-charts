@@ -2,31 +2,31 @@ apiVersion: v1
 entries:
   airflow:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2020-10-20T16:36:26.393389471+02:00"
+    appVersion: 1.13.0
+    created: "2020-12-17T15:24:58.735861336+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
-      repository: https://kubernetes-charts.storage.googleapis.com/
+      repository: https://charts.bitnami.com/bitnami
       tags:
       - database
-      version: 7.1.0
+      version: 10.1.4
     description: Airflow Helm chart for Kubernetes
-    digest: 483be36dff79be94e56fdf53811eafc4b4955d92de39b2023bbf4a063cebdd31
+    digest: 69ac40c5859c156dc8c9f84f0be28b7f8a0b9fad63073b966a7afe26dfc133f8
     name: airflow
     type: application
     urls:
-    - https://mrmuggymuggy.github.io/helm-charts/airflow-0.1.0.tgz
-    version: 0.1.0
+    - https://mrmuggymuggy.github.io/helm-charts/airflow-0.2.0.tgz
+    version: 0.2.0
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-10-20T16:36:26.393866687+02:00"
+    created: "2020-12-17T15:24:58.736534234+01:00"
     description: Nginx chart for Kubernetes
-    digest: 422d10be7096f755bf2ae6298a33e5e504b31d5d72320a241b484e1330ea8c8f
+    digest: 5ce4b5b4d048c59884f393c6a2df6803ca1249a97a630be7fc753a300337304e
     name: nginx
     type: application
     urls:
     - https://mrmuggymuggy.github.io/helm-charts/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2020-10-20T16:36:26.391105606+02:00"
+generated: "2020-12-17T15:24:58.731669977+01:00"
