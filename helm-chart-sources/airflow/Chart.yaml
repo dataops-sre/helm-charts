@@ -2,7 +2,8 @@ apiVersion: v2
 name: airflow
 description: |
   Airflow 2 Helm chart for Kubernetes, it deploys a simple Airflow with
-  LocalExecutor with airflow scheduler in a same pod
+  LocalExecutor with airflow scheduler in a same pod. It has login screen
+  disabled, it supports zipped dags.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
