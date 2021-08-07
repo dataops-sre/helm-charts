@@ -30,8 +30,10 @@ spec:
           ports:
           - containerPort: 8080
           volumeMounts:
-          - mountPath: /usr/local/airflow
-            name: {{ include "airflow.fullname" . }}-pvc
+          - mountPath: /opt/airflow/logs
+            name: {{ include "airflow.fullname" . }}-logs-pvc
+          - mountPath: /opt/airflow/dags
+            name: {{ include "airflow.fullname" . }}-dags-pvc
           args:
           - webserver
           env:
@@ -59,18 +61,17 @@ spec:
             periodSeconds: 60
             successThreshold: 1
             timeoutSeconds: 1
-          lifecycle:
-            postStart:
-              exec:
-                command: ["/bin/sh", "-c", "mkdir -p /usr/local/airflow/dags"]
           {{- with .Values.airflow.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
           {{- end }}
       volumes:
-      - name: {{ include "airflow.fullname" . }}-pvc
+      - name: {{ include "airflow.fullname" . }}-logs-pvc
         persistentVolumeClaim:
-          claimName: {{ include "airflow.fullname" . }}-pvc
+          claimName: {{ include "airflow.fullname" . }}-logs-pvc
+      - name: {{ include "airflow.fullname" . }}-dags-pvc
+        persistentVolumeClaim:
+          claimName: {{ include "airflow.fullname" . }}-dags-pvc
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

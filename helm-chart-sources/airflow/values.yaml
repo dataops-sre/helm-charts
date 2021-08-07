@@ -9,8 +9,8 @@ fullnameOverride: ""
 
 airflow:
   image:
-    repository: mrmuggymuggy/airflow
-    tag: 1.10.10
+    repository: dataopssre/airflow
+    tag: 2.1.2
     imagePullPolicy: IfNotPresent
   config:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -40,6 +40,10 @@ logsPersistence:
   accessMode: ReadWriteOnce
   size: 1Gi
 
+dagsPersistence:
+  accessMode: ReadWriteOnce
+  size: 1Gi
+
 serviceAccount:
   create: true
   annotations: {}
@@ -47,8 +51,8 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext:
+  fsGroup: 1000
 
 securityContext: {}
   # capabilities:

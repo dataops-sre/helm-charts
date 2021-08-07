@@ -2,8 +2,26 @@ apiVersion: v1
 entries:
   airflow:
   - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2021-08-07T09:36:18.86875833+02:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - database
+      version: 10.1.4
+    description: 'Airflow 2 Helm chart for Kubernetes, it deploys a simple Airflow
+      with LocalExecutor with airflow scheduler in a same pod '
+    digest: 3ae82f1be84fcbf5bac63a78cbd29b5cf484521f17b0ca076bba480403eda2f1
+    name: airflow
+    type: application
+    urls:
+    - https://dataops-sre.github.io/helm-charts/airflow-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     appVersion: 1.13.0
-    created: "2020-12-17T15:52:58.084069824+01:00"
+    created: "2021-08-07T09:36:18.864310634+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -16,17 +34,17 @@ entries:
     name: airflow
     type: application
     urls:
-    - https://mrmuggymuggy.github.io/helm-charts/airflow-0.2.0.tgz
+    - https://dataops-sre.github.io/helm-charts/airflow-0.2.0.tgz
     version: 0.2.0
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-12-17T15:52:58.084476705+01:00"
+    created: "2021-08-07T09:36:18.86959476+02:00"
     description: Nginx chart for Kubernetes
-    digest: 11ccb2b578eedd869c2ffcc0f435162fdcf5f25bf78c3b0f898ad4ca2bbfe328
+    digest: 0942e0a5fa63655053895a59f13e0d03148a1701be87bc6025256687be442b7b
     name: nginx
     type: application
     urls:
-    - https://mrmuggymuggy.github.io/helm-charts/nginx-0.1.0.tgz
+    - https://dataops-sre.github.io/helm-charts/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2020-12-17T15:52:58.080264733+01:00"
+generated: "2021-08-07T09:36:18.85899429+02:00"

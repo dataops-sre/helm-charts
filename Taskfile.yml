@@ -8,4 +8,4 @@ tasks:
     cmds:
       - helm lint helm-chart-sources/*
       - helm package -u helm-chart-sources/*
-      - helm repo index --url https://mrmuggymuggy.github.io/helm-charts .
+      - helm repo index --url https://dataops-sre.github.io/helm-charts .
